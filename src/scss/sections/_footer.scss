@@ -1,0 +1,83 @@
+@import '../mixins';
+@import '../variables';
+
+.footer{
+  background-color: #000000;
+}
+
+.footer-title{
+  color: #ffffff;
+  text-transform: $text-transform-uppercase;
+  padding-top: 66px;
+  padding-bottom: 22px;
+  text-align: $text-align;
+  font-weight: $font-weight-bold;
+}
+
+.footer-text{
+  color: #ffffff;
+  text-align: $text-align;
+  font-size: $font-size-title;
+  padding-left: $padding-footer;
+  padding-right: $padding-footer;
+  line-height: $line-height;
+}
+
+.footer-wrapper{
+  @include center;
+  margin-top: 37px;
+  margin-bottom: 34px;
+}
+
+.footer-icon{
+  margin-right: 6px;
+}
+
+.contacts{
+  @include center;
+  color: $color-text;
+  padding-left: $padding-quater;
+  padding-right: $padding-quater;
+  padding-bottom: 17vh;
+  font-size: $font-size-title;
+}
+
+.contacts-link{
+  text-decoration: $text-decoration;
+  color: $color-text;
+}
+
+@media screen and (min-width: 481px) and (max-width: 992px)  {
+  .footer-text{
+    padding-left: $padding-footer-table;
+    padding-right: $padding-footer-table;
+  }
+
+  .contacts{
+    padding-left: $padding-footer-table;
+    padding-right: $padding-footer-table;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .footer-title{
+    font-size: $font-size-text;
+  }
+
+  .footer-text{
+    font-size: $font-size-small;
+    line-height: 20px;
+  }
+
+  .contacts{
+    display: $display-block;
+    padding-left: $padding-footer-phone;
+    padding-right: $padding-footer-phone;
+    text-align: $text-align;
+    font-size: $font-size-text;
+  }
+
+  .contacts-link{
+    padding-top: 20px;
+  }
+}
